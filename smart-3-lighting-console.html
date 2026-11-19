@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart 3 Lighting Console – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html" aria-current="page">Hire</a></li><li><a href="gigs.html">Gigs</a></li><li><a href="feedback.html">Feedback</a></li></ul>
+</div></nav>
+<main>
+  <section>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Back to hire list</a></p>
+      <div class="product">
+        <div class="gal">
+          <img class="main" id="main" src="smart-3-lighting-console-2.jpg" alt="Smart 3 lighting console seen from above">
+          <div class="thumbs" id="thumbs" hidden></div>
+        </div>
+        <div>
+          <h1>Smart 3 Lighting Console</h1>
+          <p class="price-note">Get in touch for a quote. Better rates for bigger orders.</p>
+          <div class="keys"><div><b>4</b><span>DMX512 outputs</span></div><div><b>12 + 8</b><span>Playback faders</span></div><div><b>4</b><span>Encoder wheels</span></div><div><b>Art-Net</b><span>Network output</span></div></div>
+          <p>Lighting desk for running moving heads, LED fixtures and effects. Touchscreen, encoder wheels, playback faders and four DMX outputs.</p>
+          <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry%3A%20Smart%203%20Lighting%20Console">Enquire about this item</a></p>
+        </div>
+      </div>
+      <div class="specs">
+        <h2>Specs</h2>
+        <div class="spec-groups"><div><h3>Control surface</h3><dl class="spec"><div><dt>Display</dt><dd>Colour touchscreen</dd></div><div><dt>Encoders</dt><dd>4 encoder wheels (A to D) with 12 select buttons</dd></div><div><dt>Playback</dt><dd>12 faders with buttons (101–112), plus 8 faders with buttons (201–208)</dd></div><div><dt>Function keys</dt><dd>Dimmer, pan/tilt, colour, gobo, beam, effect, speed, cue, chase, patch, macro and more</dd></div><div><dt>Keypad</dt><dd>Numeric keypad with shift, thru, enter and clear</dd></div></dl></div><div><h3>Connections</h3><dl class="spec"><div><dt>DMX output</dt><dd>4 x DMX512 (outputs A, B, C, D)</dd></div><div><dt>Network</dt><dd>Art-Net (Ethernet)</dd></div><div><dt>Wireless</dt><dd>Wi-Fi</dd></div><div><dt>Timecode</dt><dd>LTC / SMPTE</dd></div><div><dt>MIDI</dt><dd>MIDI in</dd></div><div><dt>Audio</dt><dd>L / R inputs (RCA)</dd></div><div><dt>USB</dt><dd>USB port</dd></div><div><dt>Other</dt><dd>Desk lamp socket (XLR) and headset socket</dd></div></dl></div><div><h3>Brand</h3><dl class="spec"><div><dt>Make</dt><dd>LG Light</dd></div><div><dt>Model</dt><dd>Smart 3</dd></div></dl></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© Inferno LX · <a href="tel:0403455243">0403 455 243</a> · <a href="mailto:inferno-lx@outlook.com">inferno-lx@outlook.com</a> · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+<script>
+/* To add photos, add file names here. The first one is the main photo. */
+var photos=["smart-3-lighting-console-2.jpg", "smart-3-lighting-console-1.jpg", "smart-3-lighting-console-3.jpg", "smart-3-lighting-console-4.jpg"];
+(function(){
+  if(photos.length<2)return;
+  var main=document.getElementById('main'),t=document.getElementById('thumbs');
+  t.hidden=false;
+  photos.forEach(function(src,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show photo '+(i+1));
+    b.setAttribute('aria-current',i===0?'true':'false');
+    var im=document.createElement('img');im.src=src;im.alt='';b.appendChild(im);
+    b.onclick=function(){main.src=src;[].forEach.call(t.children,function(c){c.setAttribute('aria-current','false')});b.setAttribute('aria-current','true')};
+    t.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>
