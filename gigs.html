@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gigs – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html">Hire</a></li><li><a href="gigs.html" aria-current="page">Gigs</a></li><li><a href="feedback.html">Feedback</a></li></ul>
+</div></nav>
+<header class="page-head"><div class="wrap">
+  <h1>Our <span>gigs</span></h1>
+  <p>Lighting, sparks and smoke at parties, club nights and burlesque shows.</p>
+</div></header>
+<main>
+  <section>
+    <div class="wrap">
+      <div id="gallery" class="folders"></div>
+      <div id="empty" class="empty" hidden>
+        <h3>Photos coming soon</h3>
+        <p>We’re putting the gig photos together. Want to see the gear in action in the meantime? Ask us for clips from recent jobs.</p>
+        <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Gig%20photos">Ask for gig clips</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Got a gig coming up?</h2>
+      <p>Send the date, the venue and the gear you’re after, and we’ll come back with a quote.</p>
+      <div class="btns">
+        <a class="btn" href="tel:0403455243">Call 0403 455 243</a>
+        <a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry">inferno-lx@outlook.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+/* To add a gig: {title:'Event name', note:'Venue, date', photos:['a.jpg'], videos:['clip'] or [{src:'clip',sound:true}] } (clip.mp4 and clip-poster.jpg) */
+var gigs=[
+  {title:'NYE DOOF 2025',note:'New Year\u2019s Eve, 2025',photos:['nye-doof-1.jpg','nye-doof-2.jpg','nye-doof-3.jpg','nye-doof-4.jpg'],videos:['nye-doof-video-1','nye-doof-video-2','nye-doof-video-3']},
+  {title:'Corey and Tess’s wedding at Curious Events',photos:['wedding-curious-1.jpg'],videos:[{src:'wedding-curious-video-1',sound:true},{src:'wedding-curious-video-2',sound:true},{src:'wedding-curious-video-3',sound:true,wide:true}]},
+  {title:'Lighting operating at Club Ark',videos:['club-ark-video-1','club-ark-video-2','club-ark-video-3']},
+  {title:'Monthly Burlesque at Curious Events',photos:['halloween-burlesque-1.jpg'],videos:['halloween-burlesque-video-1','burlesque-curious-video-1','burlesque-curious-video-2','burlesque-curious-video-3']},
+  {title:'Melbourne Prayer Conference 2026',videos:['prayer-conference-video-1']}
+];
+(function(){
+  var g=document.getElementById('gallery');
+  if(!gigs.length){document.getElementById('empty').hidden=false;return}
+  gigs.forEach(function(e){
+    var photos=e.photos||[],videos=e.videos||[];
+    var det=document.createElement('details');det.className='gig';
+    var sum=document.createElement('summary');
+    var cover=photos[0]||((typeof videos[0]==='string'?videos[0]:videos[0].src)+'-poster.jpg');
+    var ci=document.createElement('img');ci.src=cover;ci.alt='';ci.loading='lazy';sum.appendChild(ci);
+    var tx=document.createElement('span');tx.className='gig-text';
+    var t=document.createElement('b');t.textContent=e.title;tx.appendChild(t);
+    var meta=[];
+    if(e.note)meta.push(e.note);
+    if(photos.length)meta.push(photos.length+(photos.length===1?' photo':' photos'));
+    if(videos.length)meta.push(videos.length+(videos.length===1?' video':' videos'));
+    var n=document.createElement('small');n.textContent=meta.join(' \u00b7 ');tx.appendChild(n);
+    sum.appendChild(tx);det.appendChild(sum);
+    var grid=document.createElement('div');grid.className='gallery';
+    photos.forEach(function(src){
+      var f=document.createElement('figure');f.className='shot';
+      var im=document.createElement('img');im.src=src;im.alt=e.title+' photo';im.loading='lazy';f.appendChild(im);grid.appendChild(f);
+    });
+    videos.forEach(function(v){
+      var name=typeof v==='string'?v:v.src,sound=typeof v!=='string'&&v.sound;
+      var f=document.createElement('figure');f.className='shot vshot';
+      var vd=document.createElement('video');vd.controls=true;vd.muted=!sound;vd.playsInline=true;vd.preload='metadata';vd.poster=name+'-poster.jpg';if(typeof v!=='string'&&v.wide)vd.className='wide';
+      vd.setAttribute('aria-label',e.title+(sound?' video':' video, no sound'));
+      var so=document.createElement('source');so.src=name+'.mp4';so.type='video/mp4';vd.appendChild(so);f.appendChild(vd);grid.appendChild(f);
+    });
+    det.appendChild(grid);g.appendChild(det);
+  });
+})();
+</script>
+<footer><div class="wrap">© Inferno LX · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+</body>
+</html>

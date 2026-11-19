@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1500W LED Gusher – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html" aria-current="page">Hire</a></li><li><a href="gigs.html">Gigs</a></li><li><a href="feedback.html">Feedback</a></li></ul>
+</div></nav>
+<main>
+  <section>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Back to hire list</a></p>
+      <div class="product">
+        <div class="gal" style="--ratio:3/4">
+          <img class="main" id="main" src="gusher-1500w-1.jpg" alt="1500W LED gusher shooting a tall column of smoke, lit blue from the LEDs on top">
+          <div class="thumbs" id="thumbs" hidden></div>
+        </div>
+        <div>
+          <h1>1500W LED Gusher</h1>
+          <p class="price-note">Get in touch for a quote. Better rates for bigger orders.</p>
+          <div class="keys"><div><b>1500W</b><span>Smoke gusher</span></div><div><b>5 ch</b><span>DMX control</span></div><div><b>DMX</b><span>or wireless remote</span></div><div><b>LED</b><span>Lit smoke</span></div></div>
+          <p>Vertical smoke gusher that shoots a tall, thick column of smoke straight up. Lit from underneath by a ring of colour LEDs, so the smoke glows blue, red, purple and more. Great for dance floor drops, big entrances and filling a room fast. Control it from your DMX desk on 5 channels or use the wireless remote.</p>
+          <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry%3A%201500W%20LED%20Gusher">Enquire about this item</a></p>
+          
+        </div>
+      </div>
+      <div class="specs">
+        <h2>Specs</h2>
+        <div class="spec-groups"><div><h3>Basics</h3><dl class="spec"><div><dt>Type</dt><dd>Vertical smoke gusher (fog machine) with LEDs</dd></div><div><dt>Power</dt><dd>1500W</dd></div><div><dt>Output</dt><dd>Vertical jet of smoke</dd></div><div><dt>Lighting</dt><dd>Ring of colour LEDs around the nozzle</dd></div></dl></div><div><h3>Control</h3><dl class="spec"><div><dt>DMX</dt><dd>DMX512, 5 channels</dd></div><div><dt>Wireless</dt><dd>Wireless remote</dd></div><div><dt>Panel</dt><dd>4-digit display with Menu, Up, Down and Enter buttons</dd></div><div><dt>Power switch</dt><dd>On and off rocker switch</dd></div></dl></div><div><h3>Build</h3><dl class="spec"><div><dt>Body</dt><dd>Black metal housing with carry handle</dd></div><div><dt>Tank</dt><dd>Fluid tank with screw cap on top</dd></div><div><dt>Position</dt><dd>Sits on the floor and fires upward</dd></div><div><dt>Approvals</dt><dd>UKCA, CE and FCC marked</dd></div></dl></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© Inferno LX · <a href="tel:0403455243">0403 455 243</a> · <a href="mailto:inferno-lx@outlook.com">inferno-lx@outlook.com</a> · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+<script>
+/* To add photos, add file names here. The first one is the main photo. */
+var photos=["gusher-1500w-1.jpg", "gusher-1500w-2.jpg", "gusher-1500w-3.jpg", "gusher-1500w-4.jpg", "gusher-1500w-5.jpg"];
+(function(){
+  if(photos.length<2)return;
+  var main=document.getElementById('main'),t=document.getElementById('thumbs');
+  t.hidden=false;
+  photos.forEach(function(src,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show photo '+(i+1));
+    b.setAttribute('aria-current',i===0?'true':'false');
+    var im=document.createElement('img');im.src=src;im.alt='';b.appendChild(im);
+    b.onclick=function(){main.src=src;[].forEach.call(t.children,function(c){c.setAttribute('aria-current','false')});b.setAttribute('aria-current','true')};
+    t.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

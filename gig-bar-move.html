@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gig Bar Move – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html" aria-current="page">Hire</a></li><li><a href="gigs.html">Gigs</a></li><li><a href="feedback.html">Feedback</a></li></ul>
+</div></nav>
+<main>
+  <section>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Back to hire list</a></p>
+      <div class="product">
+        <div class="gal">
+          <img class="main" id="main" src="gig-bar-move-1.jpg" alt="Gig bar on a stand with two moving heads, two par lights and two derby effects">
+          <div class="thumbs" id="thumbs" hidden></div>
+        </div>
+        <div>
+          <h1>Gig Bar Move</h1>
+          <p class="qty-line"><b>2 available</b></p>
+          <p class="price-note">Get in touch for a quote. Better rates for bigger orders.</p>
+          <div class="keys"><div><b>300W</b><span>Total power</span></div><div><b>7 + 7</b><span>Gobos and colours</span></div><div><b>16 / 35 / 65</b><span>DMX channel modes</span></div><div><b>13 kg</b><span>Weight</span></div></div>
+          <p>Everything you need for a small gig on one stand. A single bar carries two moving heads, two par lights, two derby (butterfly) effects, a white strobe and a strip of colour LEDs, so you get beams, colour washes, patterns and flashes from one quick setup. Perfect for house parties, small venues, birthdays and DJ sets where you want a full light show without a pile of gear.</p>
+          <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry%3A%20Gig%20Bar%20Move">Enquire about this item</a></p>
+          
+        </div>
+      </div>
+      <div class="specs">
+        <h2>Specs</h2>
+        <div class="spec-groups"><div><h3>What is on the bar</h3><dl class="spec"><div><dt>Moving heads</dt><dd>2, 30W white LED (2 white beads), with a colour LED ring around each lens</dd></div><div><dt>Gobos and colours</dt><dd>7 patterns plus open, 7 colours plus white</dd></div><div><dt>Par lights</dt><dd>2 x 6 x 5W 4-in-1 LED pars</dd></div><div><dt>Derby effects</dt><dd>2 x 10W 4-in-1 butterfly effects</dd></div><div><dt>Strobe</dt><dd>4 x 10W white strobe LEDs</dd></div><div><dt>Light strip</dt><dd>12 x 0.2W RGB 5050 LEDs</dd></div></dl></div><div><h3>Control and power</h3><dl class="spec"><div><dt>Total power</dt><dd>300W</dd></div><div><dt>DMX</dt><dd>DMX512, 16, 35 or 65 channel modes</dd></div><div><dt>Dimmer</dt><dd>Yes</dd></div><div><dt>Voltage</dt><dd>AC 100 to 240V, 50 / 60 Hz</dd></div></dl></div><div><h3>Build</h3><dl class="spec"><div><dt>Weight</dt><dd>About 13 kg</dd></div><div><dt>Material</dt><dd>Aluminium and plastic</dd></div><div><dt>Working temperature</dt><dd>-20 to 40°C</dd></div><div><dt>Mounting</dt><dd>Bar sits on a stand pole with clamp</dd></div></dl></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© Inferno LX · <a href="tel:0403455243">0403 455 243</a> · <a href="mailto:inferno-lx@outlook.com">inferno-lx@outlook.com</a> · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+<script>
+/* To add photos, add file names here. The first one is the main photo. */
+var photos=["gig-bar-move-1.jpg", "gig-bar-move-2.jpg"];
+(function(){
+  if(photos.length<2)return;
+  var main=document.getElementById('main'),t=document.getElementById('thumbs');
+  t.hidden=false;
+  photos.forEach(function(src,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show photo '+(i+1));
+    b.setAttribute('aria-current',i===0?'true':'false');
+    var im=document.createElement('img');im.src=src;im.alt='';b.appendChild(im);
+    b.onclick=function(){main.src=src;[].forEach.call(t.children,function(c){c.setAttribute('aria-current','false')});b.setAttribute('aria-current','true')};
+    t.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

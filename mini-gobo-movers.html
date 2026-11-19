@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mini Gobo Movers – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html" aria-current="page">Hire</a></li><li><a href="gigs.html">Gigs</a></li><li><a href="feedback.html">Feedback</a></li></ul>
+</div></nav>
+<main>
+  <section>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Back to hire list</a></p>
+      <div class="product">
+        <div class="gal" style="--ratio:3/4">
+          <img class="main" id="main" src="mini-gobo-movers-1.jpg" alt="Mini gobo mover throwing an orange beam across the room">
+          <div class="thumbs" id="thumbs" hidden></div>
+        </div>
+        <div>
+          <h1>Mini Gobo Movers</h1>
+          <p class="qty-line"><b>4 available</b></p>
+          <p class="price-note">Get in touch for a quote. Better rates for bigger orders.</p>
+          <div class="keys"><div><b>120W</b><span>Power</span></div><div><b>8 + 8</b><span>Gobos and colours</span></div><div><b>540° / 270°</b><span>Pan and tilt</span></div><div><b>9 / 11</b><span>DMX channels</span></div></div>
+          <p>120W mini LED spot moving head with 8 gobos and 8 colours. Run it from DMX512, to the music, or on auto.</p>
+          <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry%3A%20Mini%20Gobo%20Movers">Enquire about this item</a></p>
+          <video class="vid" controls muted playsinline preload="metadata" poster="mini-gobo-movers-video-1-poster.jpg" aria-label="Video of the Mini Gobo Movers in use, no sound"><source src="mini-gobo-movers-video-1.mp4" type="video/mp4"></video>
+          <video class="vid" controls muted playsinline preload="metadata" poster="mini-gobo-movers-video-2-poster.jpg" aria-label="Video of the Mini Gobo Movers in use, no sound"><source src="mini-gobo-movers-video-2.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      <div class="specs">
+        <h2>Specs</h2>
+        <div class="spec-groups"><div><h3>Basics</h3><dl class="spec"><div><dt>Type</dt><dd>Mini LED spot moving head</dd></div><div><dt>Power</dt><dd>120W</dd></div><div><dt>Gobos</dt><dd>8 gobo positions</dd></div><div><dt>Colours</dt><dd>8 colour positions</dd></div></dl></div><div><h3>Movement</h3><dl class="spec"><div><dt>Pan</dt><dd>540°</dd></div><div><dt>Tilt</dt><dd>270°</dd></div></dl></div><div><h3>Control</h3><dl class="spec"><div><dt>Control modes</dt><dd>DMX512, sound-activated, auto, master-slave</dd></div><div><dt>DMX channels</dt><dd>9 or 11</dd></div><div><dt>Display</dt><dd>LED readout with menu buttons</dd></div></dl></div><div><h3>Beam and effects</h3><dl class="spec"><div><dt>Dimmer</dt><dd>0–100%</dd></div><div><dt>Strobe</dt><dd>1–25 flashes per second</dd></div></dl></div><div><h3>Power and build</h3><dl class="spec"><div><dt>Input voltage</dt><dd>AC 100–240V, 50/60Hz</dd></div><div><dt>Cooling</dt><dd>Fan cooled</dd></div></dl></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© Inferno LX · <a href="tel:0403455243">0403 455 243</a> · <a href="mailto:inferno-lx@outlook.com">inferno-lx@outlook.com</a> · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+<script>
+/* To add photos, add file names here. The first one is the main photo. */
+var photos=["mini-gobo-movers-1.jpg", "mini-gobo-movers-2.jpg", "mini-gobo-movers-3.jpg", "mini-gobo-movers-4.jpg"];
+(function(){
+  if(photos.length<2)return;
+  var main=document.getElementById('main'),t=document.getElementById('thumbs');
+  t.hidden=false;
+  photos.forEach(function(src,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show photo '+(i+1));
+    b.setAttribute('aria-current',i===0?'true':'false');
+    var im=document.createElement('img');im.src=src;im.alt='';b.appendChild(im);
+    b.onclick=function(){main.src=src;[].forEach.call(t.children,function(c){c.setAttribute('aria-current','false')});b.setAttribute('aria-current','true')};
+    t.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

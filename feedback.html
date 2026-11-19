@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Feedback – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html">Hire</a></li><li><a href="gigs.html">Gigs</a></li><li><a href="feedback.html" aria-current="page">Feedback</a></li></ul>
+</div></nav>
+<header class="page-head"><div class="wrap">
+  <h1>Client <span>feedback</span></h1>
+  <p>What the people we’ve worked with have to say.</p>
+</div></header>
+<main>
+  <section>
+    <div class="wrap">
+      <div id="reviews" class="reviews"></div>
+      <div id="empty" class="empty" hidden>
+        <h3>Feedback coming soon</h3>
+        <p>We’re collecting feedback from recent clients. Worked with us? We’d like to hear how it went.</p>
+        <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Feedback%20for%20Inferno%20LX">Send us your feedback</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Got a gig coming up?</h2>
+      <p>Send the date, the venue and the gear you’re after, and we’ll come back with a quote.</p>
+      <div class="btns">
+        <a class="btn" href="tel:0403455243">Call 0403 455 243</a>
+        <a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry">inferno-lx@outlook.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+/* To add feedback, add a line: {quote:'What the client said', name:'Client name', event:'Event, month year'} */
+var reviews=[
+];
+(function(){
+  var r=document.getElementById('reviews');
+  if(!reviews.length){document.getElementById('empty').hidden=false;return}
+  reviews.forEach(function(v){
+    var f=document.createElement('figure');f.className='review';
+    var q=document.createElement('blockquote');q.textContent=v.quote;f.appendChild(q);
+    var c=document.createElement('figcaption');
+    var b=document.createElement('b');b.textContent=v.name||'Client';c.appendChild(b);
+    if(v.event){var e=document.createElement('span');e.textContent=v.event;c.appendChild(e)}
+    f.appendChild(c);r.appendChild(f);
+  });
+})();
+</script>
+<footer><div class="wrap">© Inferno LX · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+</body>
+</html>
