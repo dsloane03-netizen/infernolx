@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sparks (powder included) – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html" aria-current="page">Hire</a></li><li><a href="gigs.html">Gigs</a></li><li><a href="feedback.html">Feedback</a></li></ul>
+</div></nav>
+<main>
+  <section>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Back to hire list</a></p>
+      <div class="product">
+        <div class="gal" style="--ratio:1/1">
+          <img class="main" id="main" src="sparks-1.jpg" alt="Four spark machines throwing columns of sparks into the air">
+          <div class="thumbs" id="thumbs" hidden></div>
+        </div>
+        <div>
+          <h1>Sparks (powder included)</h1>
+          <p class="qty-line"><b>4 available</b></p>
+          <p class="price-note">Get in touch for a quote. Better rates for bigger orders.</p>
+          <div class="keys"><div><b>3–3.5 m</b><span>Spray height, large powder</span></div><div><b>420W</b><span>Power</span></div><div><b>3–5 min</b><span>Preheat time</span></div><div><b>5.5 kg</b><span>Weight</span></div></div>
+          <p>Columns of sparks for entrances, first dances, drops and big finishes. Each machine throws sparks straight up, and you can run several together for a bigger show. Controlled by DMX or wireless, with powder included in the hire.</p>
+          <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry%3A%20Sparks%20(powder%20included)">Enquire about this item</a></p>
+          
+        </div>
+      </div>
+      <div class="specs">
+        <h2>Specs</h2>
+        <div class="spec-groups"><div><h3>Performance</h3><dl class="spec"><div><dt>Spray height</dt><dd>3–3.5 m with large powder, 2–2.5 m with medium powder</dd></div><div><dt>Spray direction</dt><dd>Straight up</dd></div><div><dt>Preheating time</dt><dd>3–5 minutes</dd></div></dl></div><div><h3>Control and power</h3><dl class="spec"><div><dt>Control</dt><dd>Wireless control or standard DMX signal</dd></div><div><dt>Interfaces</dt><dd>Double DMX, double AC power</dd></div><div><dt>Voltage</dt><dd>AC 220V, 50–60 Hz</dd></div><div><dt>Power</dt><dd>420W, 2.8A</dd></div></dl></div><div><h3>Build</h3><dl class="spec"><div><dt>Size</dt><dd>190 x 184 x 245 mm</dd></div><div><dt>Weight</dt><dd>5.5 kg</dd></div><div><dt>Operating temperature</dt><dd>-10 to 50°C</dd></div></dl></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© Inferno LX · <a href="tel:0403455243">0403 455 243</a> · <a href="mailto:inferno-lx@outlook.com">inferno-lx@outlook.com</a> · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+<script>
+/* To add photos, add file names here. The first one is the main photo. */
+var photos=["sparks-1.jpg"];
+(function(){
+  if(photos.length<2)return;
+  var main=document.getElementById('main'),t=document.getElementById('thumbs');
+  t.hidden=false;
+  photos.forEach(function(src,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show photo '+(i+1));
+    b.setAttribute('aria-current',i===0?'true':'false');
+    var im=document.createElement('img');im.src=src;im.alt='';b.appendChild(im);
+    b.onclick=function(){main.src=src;[].forEach.call(t.children,function(c){c.setAttribute('aria-current','false')});b.setAttribute('aria-current','true')};
+    t.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>

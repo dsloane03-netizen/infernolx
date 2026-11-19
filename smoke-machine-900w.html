@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>900W LED Smoke Machine – Inferno LX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="wrap">
+  <a class="brand" href="index.html">Inferno <span>LX</span></a>
+  <ul><li><a href="index.html" aria-current="page">Hire</a></li><li><a href="gigs.html">Gigs</a></li><li><a href="feedback.html">Feedback</a></li></ul>
+</div></nav>
+<main>
+  <section>
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Back to hire list</a></p>
+      <div class="product">
+        <div class="gal" style="--ratio:3/4;--fit:contain">
+          <img class="main" id="main" src="smoke-machine-900w-1.jpg" alt="900W LED fogger smoke machine, white metal body with LEDs on the front">
+          <div class="thumbs" id="thumbs" hidden></div>
+        </div>
+        <div>
+          <h1>900W LED Smoke Machine</h1>
+          <p class="price-note">Get in touch for a quote. Better rates for bigger orders.</p>
+          <div class="keys"><div><b>900W</b><span>Smoke machine</span></div><div><b>LED</b><span>Lit smoke</span></div></div>
+          <p>Powerful 900W smoke machine with LEDs in the nozzle that light the smoke in colour as it comes out. Fills a room fast and gives your beams and lasers something to cut through. Comes with a wired remote. Built in a tough metal body with a carry handle and an adjustable stand bracket for tilting or hanging.</p>
+          <p><a class="btn" href="mailto:inferno-lx@outlook.com?subject=Hire%20enquiry%3A%20900W%20LED%20Smoke%20Machine">Enquire about this item</a></p>
+          <video class="vid" controls muted playsinline preload="metadata" poster="smoke-machine-900w-video-1-poster.jpg" aria-label="Video of the 900W LED Smoke Machine in use, no sound"><source src="smoke-machine-900w-video-1.mp4" type="video/mp4"></video>
+          <video class="vid" controls muted playsinline preload="metadata" poster="smoke-machine-900w-video-2-poster.jpg" aria-label="Video of the 900W LED Smoke Machine in use, no sound"><source src="smoke-machine-900w-video-2.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      <div class="specs">
+        <h2>Specs</h2>
+        <div class="spec-groups"><div><h3>Basics</h3><dl class="spec"><div><dt>Type</dt><dd>Smoke machine (fogger) with LEDs</dd></div><div><dt>Power</dt><dd>900W</dd></div><div><dt>Control</dt><dd>Wired remote included</dd></div><div><dt>Lighting</dt><dd>LEDs at the nozzle light the smoke in colour</dd></div></dl></div><div><h3>Build</h3><dl class="spec"><div><dt>Body</dt><dd>White metal housing with vents</dd></div><div><dt>Handle</dt><dd>Carry handle on top</dd></div><div><dt>Bracket</dt><dd>Adjustable yoke bracket with tilt knob, hangs or sits on the floor</dd></div></dl></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© Inferno LX · <a href="tel:0403455243">0403 455 243</a> · <a href="mailto:inferno-lx@outlook.com">inferno-lx@outlook.com</a> · <a href="https://www.instagram.com/inferno_lx" target="_blank" rel="noopener">Instagram</a></div></footer>
+<script>
+/* To add photos, add file names here. The first one is the main photo. */
+var photos=["smoke-machine-900w-1.jpg", "smoke-machine-900w-2.jpg", "smoke-machine-900w-3.jpg"];
+(function(){
+  if(photos.length<2)return;
+  var main=document.getElementById('main'),t=document.getElementById('thumbs');
+  t.hidden=false;
+  photos.forEach(function(src,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show photo '+(i+1));
+    b.setAttribute('aria-current',i===0?'true':'false');
+    var im=document.createElement('img');im.src=src;im.alt='';b.appendChild(im);
+    b.onclick=function(){main.src=src;[].forEach.call(t.children,function(c){c.setAttribute('aria-current','false')});b.setAttribute('aria-current','true')};
+    t.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>
